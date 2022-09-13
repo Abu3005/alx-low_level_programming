@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * Return: notting, return void
+ * Return: nothing, return void
  */
 
 int main(void)
@@ -15,6 +15,7 @@ _putchar('u');
 _putchar('t');
 _putchar('c');
 _putchar('h');
+_putchar('a');
 _putchar('r');
 
 return (0);
