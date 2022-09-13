@@ -15,8 +15,8 @@ void print_alphabet_x10(void)
 		c = 'a';
 		while (c <= '2')
 		{
-			_puitchar(c)
-				c++;
+			_puitchar(c);
+			c++;
 		}
 		_putchar('\n');
 		i++;
