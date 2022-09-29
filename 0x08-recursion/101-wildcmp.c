@@ -1,23 +1,52 @@
-#include "main.h"
+nclude "main.h"
 
 /**
- * _print_rev_recursion - main - check the code
- * @s: character of a string
- * Return: Always 0.
+ * wildcmp - Compare strings
+ * @s1: pointer to string params
+ * @s2: pointer to string params
+ * Return: 0
  */
 
-void _print_rev_recursion(char *s)
+
+
+int wildcmp(char *s1, char *s2)
 
 {
 
-	if (*s != '\0')
+	if (*s1 == '\0')
 
 	{
 
-		_print_rev_recursion(s + 1);
+		if (*s2 != '\0' && *s2 == '*')
 
-		_putchar(*s);
+		{
+
+			return (wildcmp(s1, s2 + 1));
+
+		}
+
+		return (*s2 == '\0');
 
 	}
+
+
+
+	if (*s2 == '*')
+
+	{
+
+		return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
+
+	}
+
+	else if (*s1 == *s2)
+
+	{
+
+		return (wildcmp(s1 + 1, s2 + 1));
+
+	}
+
+	return (0);
 
 }

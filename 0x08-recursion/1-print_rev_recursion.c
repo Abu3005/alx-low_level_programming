@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - main - check the code
- * @s: character of string
+ * _print_rev_recursion - main - check the code
+ * @s: character of a string
  * Return: Always 0.
  */
 
-int _strlen_recursion(char *s)
+void _print_rev_recursion(char *s)
 
 {
 
@@ -14,10 +14,10 @@ int _strlen_recursion(char *s)
 
 	{
 
-		return (1 + _strlen_recursion(s + 1));
+		_print_rev_recursion(s + 1);
+
+		_putchar(*s);
 
 	}
-
-	return (0);
 
 }

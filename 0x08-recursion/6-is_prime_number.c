@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
-
  * prime_a - main - check the code
  * @a: number
  * @b: number of power
@@ -39,15 +38,10 @@ int prime_a(int a, int b)
 
 
 /**
-
  * is_prime_number - main - check the code
-
  * @n: number
-
  *
-
  * Return: Always 0.
-
  */
 
 int is_prime_number(int n)
