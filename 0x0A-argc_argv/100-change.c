@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
 /**
  * main - prints the function.
  * @argc: counts the arguments of the function.
@@ -27,53 +25,29 @@ int main(int argc, char *argv[])
 			{
 				cents -= 10;
 				coins++;
-
-}
-
-else if (cents % 5 < cents)
-
-{
-
-cents -= 5;
-
-coins++;
-
-}
-
-else if (cents % 2 < cents)
-
-{
-
-cents -= 2;
-
-coins++;			}
-
-else if (cents % 1 < cents)
-
-{
-
-cents -= 1;
-
-coins++;
-
-}
-
-}
-
-}
-
-else
-
-{
-
-printf("Error\n");
-
-return (1);
-
-}
-
-printf("%d\n", coins);
-
-return (0);
-
+			}
+			else if (cents % 5 < cents)
+			{
+				cents -= 5;
+				coins++;
+			}
+			else if (cents % 2 < cents)
+			{
+				cents -= 2;
+				coins++;
+			}
+			else if (cents % 1 < cents)
+			{
+				cents -= 1;
+				coins++;
+			}
+		}
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+	printf("%d\n", coins);
+	return (0);
 }
