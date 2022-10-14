@@ -7,7 +7,9 @@
  * Return: no return.
  */
 void print_all(const char * const format, ...)
+
 {
+
 	va_list valist;
 
 	unsigned int i = 0, j, c = 0;
@@ -16,20 +18,34 @@ void print_all(const char * const format, ...)
 
 	const char t_arg[] = "cifs";
 
+
+
 	va_start(valist, format);
 
 	while (format && format[i])
+
 	{
+
 		j = 0;
+
 		while (t_arg[j])
+
 		{
+
 			if (format[i] == t_arg[j] && c)
+
 			{
+
 				printf(", ");
+
 				break;
+
 			} j++;
+
 		}
+
 		switch (format[i])
+
 		{
 
 		case 'c':
@@ -74,4 +90,4 @@ void print_all(const char * const format, ...)
 
 	printf("\n"), va_end(valist);
 
-
+}
